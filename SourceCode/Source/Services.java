@@ -20,6 +20,7 @@ class ServiceFrame extends JFrame {
     JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
 
     ServiceFrame() {
+        
         this.setSize(900, 500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
