@@ -1,8 +1,11 @@
 package ServicesWindow;
 
+import CreateAccountWindow.CreateAccount;
+
 import java.awt.Color;
 import java.awt.GridLayout;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -36,12 +39,12 @@ class ServiceFrame extends JFrame {
 
         panel_content.setBackground(Color.GRAY);
 
-        panel_button.setLayout(new GridLayout(4,1));
+        panel_button.setLayout(new GridLayout(4, 1));
         panel_button.add(button_createAccount);
         panel_button.add(button_accountInformation);
         panel_button.add(button_deposit);
         panel_button.add(button_withdraw);
-        
+
         splitpane = new JSplitPane(SwingConstants.VERTICAL, panel_button, panel_content);
         splitpane.setOrientation(SwingConstants.VERTICAL);
         this.add(splitpane);
