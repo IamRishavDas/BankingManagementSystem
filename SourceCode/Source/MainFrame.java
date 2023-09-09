@@ -1,4 +1,7 @@
 //initially the login id = "RishavDas" and the Password is = "adgjkaw1" [ this is just for verification purpose Data base will be added later on]
+
+import ServicesWindow.Services;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -85,6 +88,7 @@ class LogInAttributeCheck implements ActionListener {
         if (entered_userID.equals("RishavDas") && entered_password.equals("adgjkaw1")) {
             JOptionPane.showMessageDialog(null, "Successfully Logged In", "Authorization Successfull",
                     JOptionPane.INFORMATION_MESSAGE);
+            Services.main(null);
         } else {
             JOptionPane.showMessageDialog(null, "You Have Entered wrong user id or password", "Authorization Error",
                     JOptionPane.ERROR_MESSAGE);
