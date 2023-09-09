@@ -1,4 +1,4 @@
-
+//initially the login id = "RishavDas" and the Password is = "adgjkaw1" [ this is just for verification purpose Data base will be added later on]
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
