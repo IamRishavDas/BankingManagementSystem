@@ -1,6 +1,6 @@
 package ServicesWindow;
 
-import CreateAccountWindow.CreateAccount;
+
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -15,16 +15,18 @@ import javax.swing.SwingConstants;
 
 class ServiceFrame extends JFrame {
 
+    JFrame frame_service;
     JPanel panel_content, panel_button;
     JSplitPane splitpane;
     JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
 
     ServiceFrame() {
         
-        this.setSize(900, 500);
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setResizable(false);
+        frame_service = new JFrame("Service Window");
+        frame_service.setSize(900, 500);
+        frame_service.setLocationRelativeTo(null);
+        frame_service.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame_service.setResizable(true);
 
         button_createAccount = new JButton("Create Account");
         button_createAccount.setBackground(new Color(95, 92, 237));
@@ -48,9 +50,9 @@ class ServiceFrame extends JFrame {
 
         splitpane = new JSplitPane(SwingConstants.VERTICAL, panel_button, panel_content);
         splitpane.setOrientation(SwingConstants.VERTICAL);
-        this.add(splitpane);
+        frame_service.add(splitpane);
 
-        this.setVisible(true);
+        frame_service.setVisible(true);
     }
 }
 
