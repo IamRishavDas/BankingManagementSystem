@@ -1,7 +1,5 @@
 package ServicesWindow;
 
-
-
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -21,7 +19,7 @@ class ServiceFrame extends JFrame {
     JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
 
     ServiceFrame() {
-        
+
         frame_service = new JFrame("Service Window");
         frame_service.setSize(900, 500);
         frame_service.setLocationRelativeTo(null);

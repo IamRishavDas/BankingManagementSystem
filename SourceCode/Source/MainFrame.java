@@ -74,7 +74,7 @@ class LOG_IN_Frame extends JFrame {
         c.add(button_submit);
 
         this.setVisible(true);
-        
+
     }
 }
 
@@ -93,7 +93,7 @@ class LogInAttributeCheck implements ActionListener {
             JOptionPane.showMessageDialog(null, "You Have Entered wrong user id or password", "Authorization Error",
                     JOptionPane.ERROR_MESSAGE);
         }
-        
+
     }
 }
 
