@@ -29,7 +29,7 @@ class LOG_IN_Frame extends JFrame {
         this.setSize(900, 500);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         c = this.getContentPane();
         c.setBackground(Color.gray);
