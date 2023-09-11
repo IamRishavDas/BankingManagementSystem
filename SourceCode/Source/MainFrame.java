@@ -18,6 +18,9 @@ import java.awt.event.ActionListener;
 
 class LOG_IN_Frame extends JFrame {
 
+    /*
+     * Here we have declared the general components which we need to form the frame look
+     */
     Container c;
     JLabel label_login, label_user, label_password, label_bank_image;
     static JTextField text_userid;
@@ -26,15 +29,20 @@ class LOG_IN_Frame extends JFrame {
 
     LOG_IN_Frame() {
 
+        /*
+         *setting the frame size location on screen and exit status type
+         */
         this.setSize(900, 500);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        /*setting container color */
         c = this.getContentPane();
         c.setBackground(Color.gray);
         c.setLayout(null);
 
+        /*setting all components in its correct position */
         label_login = new JLabel("LOG IN PAGE");
         label_login.setBounds(300, 40, 300, 40);
         label_login.setFont(new Font("arial black", Font.BOLD, 30));
@@ -78,6 +86,7 @@ class LOG_IN_Frame extends JFrame {
     }
 }
 
+/* what the submit action listener has performed here */
 class LogInAttributeCheck implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -88,6 +97,7 @@ class LogInAttributeCheck implements ActionListener {
         if (entered_userID.equals("RishavDas") && entered_password.equals("adgjkaw1")) {
             JOptionPane.showMessageDialog(null, "Successfully Logged In", "Authorization Successfull",
                     JOptionPane.INFORMATION_MESSAGE);
+            //calling the service frame
             Services.main(null);
         } else {
             JOptionPane.showMessageDialog(null, "You Have Entered wrong user id or password", "Authorization Error",
@@ -96,7 +106,7 @@ class LogInAttributeCheck implements ActionListener {
 
     }
 }
-
+//main function just to call the log in frame and its constructor
 @SuppressWarnings("unused")
 public class MainFrame {
     public static void main(String[] args) {
