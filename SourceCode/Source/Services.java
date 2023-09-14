@@ -1,6 +1,9 @@
 package ServicesWindow;
 
 import CreateAccountWindow.CreateAccount;
+import AccountInformationWindow.AccountInformation;
+import DepositWindow.Deposit;
+import WithdrawWindow.Withdraw;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -63,17 +66,17 @@ class CreateAccountActionListener implements ActionListener{
 }
 class AccountInformationActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
-
+        AccountInformation.main(null);
     }
 }
 class DepositActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
-
+        Deposit.main(null);
     }
 }
 class WithdrawActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
-
+        Withdraw.main(null);
     }
 }
 
