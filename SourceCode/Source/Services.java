@@ -1,6 +1,7 @@
 package ServicesWindow;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,43 +15,63 @@ import javax.swing.SwingConstants;
 class ServiceFrame extends JFrame {
 
     JFrame frame_service;
-    JPanel panel_content, panel_button;
-    JSplitPane splitpane;
+    
+    
     JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
 
     ServiceFrame() {
 
         frame_service = new JFrame("Service Window");
-        frame_service.setSize(900, 500);
+        frame_service.setSize(900, 100);
         frame_service.setLocationRelativeTo(null);
         frame_service.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame_service.setResizable(true);
+        frame_service.setLayout(new FlowLayout());
 
         button_createAccount = new JButton("Create Account");
         button_createAccount.setBackground(new Color(95, 92, 237));
+        button_createAccount.addActionListener(new CreateAccountActionListener());
+
         button_accountInformation = new JButton("Account Information");
         button_accountInformation.setBackground(new Color(128, 125, 238));
+        button_accountInformation.addActionListener(new AccountInformationActionListener());
+
         button_deposit = new JButton("Deposit");
         button_deposit.setBackground(new Color(158, 156, 233));
+        button_deposit.addActionListener(new DepositActionListener());
+
         button_withdraw = new JButton("Withdraw");
         button_withdraw.setBackground(new Color(201, 200, 237));
+        button_withdraw.addActionListener(new WithdrawActionListener());
 
-        panel_content = new JPanel();
-        panel_button = new JPanel();
+        frame_service.add(button_createAccount);
+        frame_service.add(button_accountInformation);
+        frame_service.add(button_deposit);
+        frame_service.add(button_withdraw);
 
-        panel_content.setBackground(Color.GRAY);
-
-        panel_button.setLayout(new GridLayout(4, 1));
-        panel_button.add(button_createAccount);
-        panel_button.add(button_accountInformation);
-        panel_button.add(button_deposit);
-        panel_button.add(button_withdraw);
-
-        splitpane = new JSplitPane(SwingConstants.VERTICAL, panel_button, panel_content);
-        splitpane.setOrientation(SwingConstants.VERTICAL);
-        frame_service.add(splitpane);
 
         frame_service.setVisible(true);
+    }
+}
+
+class CreateAccountActionListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+        
+    }
+}
+class AccountInformationActionListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+
+    }
+}
+class DepositActionListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+
+    }
+}
+class WithdrawActionListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+
     }
 }
 
