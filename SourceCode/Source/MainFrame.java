@@ -103,7 +103,6 @@ class LogInAttributeCheck implements ActionListener {
             JOptionPane.showMessageDialog(null, "You Have Entered wrong user id or password", "Authorization Error",
                     JOptionPane.ERROR_MESSAGE);
         }
-
     }
 }
 //main function just to call the log in frame and its constructor
