@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 public class CreateAccount {
     public static JFrame createAccountFrame;
     public static JPanel createAccountPanel;
+
     public static void main(String[] args) {
         createAccountPanel = new JPanel(null);
         createAccountFrame = new JFrame("Create Account Window");

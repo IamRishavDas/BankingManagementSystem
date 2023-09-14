@@ -20,8 +20,7 @@ import javax.swing.SwingConstants;
 class ServiceFrame extends JFrame {
 
     JFrame frame_service;
-    
-    
+
     JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
 
     ServiceFrame() {
@@ -54,28 +53,30 @@ class ServiceFrame extends JFrame {
         frame_service.add(button_deposit);
         frame_service.add(button_withdraw);
 
-
         frame_service.setVisible(true);
     }
 }
 
-class CreateAccountActionListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
+class CreateAccountActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
         CreateAccount.main(null);
     }
 }
-class AccountInformationActionListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
+
+class AccountInformationActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
         AccountInformation.main(null);
     }
 }
-class DepositActionListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
+
+class DepositActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
         Deposit.main(null);
     }
 }
-class WithdrawActionListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
+
+class WithdrawActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
         Withdraw.main(null);
     }
 }
