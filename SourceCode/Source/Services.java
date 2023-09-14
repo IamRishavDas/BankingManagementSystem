@@ -1,5 +1,7 @@
 package ServicesWindow;
 
+import CreateAccountWindow.CreateAccount;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -24,7 +26,7 @@ class ServiceFrame extends JFrame {
         frame_service = new JFrame("Service Window");
         frame_service.setSize(900, 100);
         frame_service.setLocationRelativeTo(null);
-        frame_service.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame_service.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         frame_service.setResizable(true);
         frame_service.setLayout(new FlowLayout());
 
@@ -56,7 +58,7 @@ class ServiceFrame extends JFrame {
 
 class CreateAccountActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
-        
+        CreateAccount.main(null);
     }
 }
 class AccountInformationActionListener implements ActionListener{
