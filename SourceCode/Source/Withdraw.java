@@ -8,7 +8,7 @@ public class Withdraw {
     public static void main(String[] args) {
 
         WithdrawFrame = new JFrame("Account Information Window");
-        WithdrawFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        WithdrawFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         WithdrawFrame.setLocationRelativeTo(null);
         WithdrawFrame.setSize(1000, 800);
         WithdrawFrame.setResizable(false);
