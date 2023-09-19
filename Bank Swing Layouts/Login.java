@@ -1,6 +1,4 @@
 
-package firstapplication;
-
 import javax.swing.*;
 import java.awt.*;
 
