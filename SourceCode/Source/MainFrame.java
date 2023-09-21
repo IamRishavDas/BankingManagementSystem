@@ -19,69 +19,71 @@ import java.awt.event.ActionListener;
 class LOG_IN_Frame extends JFrame {
 
     /*
-     * Here we have declared the general components which we need to form the frame look
+     * Here we have declared the general components which we need to form the frame
+     * look
      */
-    Container c;
-    JLabel label_login, label_user, label_password, label_bank_image;
-    static JTextField text_userid;
-    static JPasswordField passwordField;
-    JButton button_submit;
+
+    static JTextField uidtext;
+    static JPasswordField passtext;
+    JButton b, b2;
 
     LOG_IN_Frame() {
 
-        /*
-         *setting the frame size location on screen and exit status type
-         */
-        this.setSize(900, 500);
+        setTitle("LOG IN");
+        setSize(700, 500);
+        setLayout(null);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        /*setting container color */
-        c = this.getContentPane();
-        c.setBackground(Color.gray);
-        c.setLayout(null);
+        // ImageIcon i1 = new
+        // ImageIcon(ClassLoader.getSystemResource("pics/23388860.jpg"));
+        // Image i3 = i1.getImage().getScaledInstance(100, 100, 100);
+        // ImageIcon i4 = new ImageIcon(i3);
+        // JLabel i2 = new JLabel(i4);
+        // i2.setBounds(150, 10, 100, 100);
+        // add(i2);
 
-        /*setting all components in its correct position */
-        label_login = new JLabel("LOG IN PAGE");
-        label_login.setBounds(300, 40, 300, 40);
-        label_login.setFont(new Font("arial black", Font.BOLD, 30));
-        c.add(label_login);
+        Color color = new Color(83, 202, 255);
+        getContentPane().setBackground(color);
+        JLabel l1 = new JLabel("LOG IN");
+        l1.setFont(new Font("Arial", Font.BOLD, 40));
+        l1.setBounds(300, 10, 400, 100);
+        add(l1);
 
-        ImageIcon bank = new ImageIcon("Bank1.png");
-        label_bank_image = new JLabel(bank);
-        label_bank_image.setBounds(50, 90, bank.getIconWidth(), bank.getIconHeight());
-        c.add(label_bank_image);
+        JLabel uid = new JLabel("ENTER USER ID");
+        uid.setFont(new Font("Arial", Font.BOLD, 18));
+        uid.setBounds(150, 100, 150, 100);
+        add(uid);
 
-        Font attributeFont = new Font("Berlin Sans FB Demi", Font.PLAIN, 17);
+        Font font = new Font("arial black", Font.BOLD, 15);
 
-        label_user = new JLabel("User ID");
-        label_user.setBounds(325, 200, 100, 40);
-        label_user.setFont(attributeFont);
-        c.add(label_user);
+        uidtext = new JTextField();
+        uidtext.setBounds(150, 185, 400, 30);
+        uidtext.setFont(font);
+        add(uidtext);
 
-        label_password = new JLabel("Password");
-        label_password.setBounds(325, 260, 100, 40);
-        label_password.setFont(attributeFont);
-        c.add(label_password);
+        JLabel pass = new JLabel("ENTER PASSWORD");
+        pass.setFont(new Font("Arial", Font.BOLD, 18));
+        pass.setBounds(150, 200, 400, 100);
+        add(pass);
 
-        text_userid = new JTextField();
-        text_userid.setBounds(500, 200, 300, 40);
-        text_userid.setFont(attributeFont);
-        c.add(text_userid);
+        passtext = new JPasswordField();
+        passtext.setBounds(150, 285, 400, 30);
+        passtext.setFont(font);
+        add(passtext);
 
-        passwordField = new JPasswordField();
-        passwordField.setBounds(500, 260, 300, 40);
-        passwordField.setFont(attributeFont);
-        c.add(passwordField);
+        b = new JButton("LOG IN");
+        b.setBounds(170, 350, 150, 20);
+        b.addActionListener(new LogInAttributeCheck());
+        add(b);
 
-        button_submit = new JButton("Submit");
-        button_submit.setBounds(375, 350, 100, 40);
-        button_submit.setFont(attributeFont);
-        button_submit.addActionListener(new LogInAttributeCheck());
-        c.add(button_submit);
+        b2 = new JButton("New User");
+        b2.setBounds(340, 350, 200, 20);
+        b2.addActionListener(new NewUserButtonListener());
+        add(b2);
 
-        this.setVisible(true);
+        setVisible(true);
 
     }
 }
@@ -91,13 +93,13 @@ class LogInAttributeCheck implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        String entered_userID = LOG_IN_Frame.text_userid.getText();
-        String entered_password = LOG_IN_Frame.passwordField.getText();
+        String entered_userID = LOG_IN_Frame.uidtext.getText();
+        String entered_password = LOG_IN_Frame.passtext.getText();
 
         if (entered_userID.equals("RishavDas") && entered_password.equals("adgjkaw1")) {
             JOptionPane.showMessageDialog(null, "Successfully Logged In", "Authorization Successfull",
                     JOptionPane.INFORMATION_MESSAGE);
-            //calling the service frame
+            // calling the service frame
             Services.main(null);
         } else {
             JOptionPane.showMessageDialog(null, "You Have Entered wrong user id or password", "Authorization Error",
@@ -105,7 +107,14 @@ class LogInAttributeCheck implements ActionListener {
         }
     }
 }
-//main function just to call the log in frame and its constructor
+
+class NewUserButtonListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+        JOptionPane.showMessageDialog(null, "New user Attribute form", "Sign Up", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
+
+// main function just to call the log in frame and its constructor
 @SuppressWarnings("unused")
 public class MainFrame {
     public static void main(String[] args) {

@@ -1,89 +1,125 @@
 package ServicesWindow;
 
 import CreateAccountWindow.CreateAccount;
-import AccountInformationWindow.AccountInformation;
-import DepositWindow.Deposit;
-import WithdrawWindow.Withdraw;
+import AccountStatementWindow.AccountStatement;
+import BalanceEnquiryWindow.BalanceEnquiry;
+import FlatCashWindow.FlatCash;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-import javax.swing.SwingConstants;
+import javax.swing.JLabel;
 
-class ServiceFrame extends JFrame {
+class ServiceFrame extends JFrame implements ActionListener {
 
-    JFrame frame_service;
-
-    JButton button_createAccount, button_accountInformation, button_deposit, button_withdraw;
+    static JButton b, b0, b1, b11, b2, b21, b3, b31, b4;
 
     ServiceFrame() {
+        setLayout(null);
 
-        frame_service = new JFrame("Service Window");
-        frame_service.setSize(900, 100);
-        frame_service.setLocationRelativeTo(null);
-        frame_service.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        frame_service.setResizable(true);
-        frame_service.setLayout(new FlowLayout());
+        setSize(600, 500);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setResizable(false);
 
-        button_createAccount = new JButton("Create Account");
-        button_createAccount.setBackground(new Color(95, 92, 237));
-        button_createAccount.addActionListener(new CreateAccountActionListener());
+        Color color = new Color(204, 252, 232);
+        this.getContentPane().setBackground(color);
 
-        button_accountInformation = new JButton("Account Information");
-        button_accountInformation.setBackground(new Color(128, 125, 238));
-        button_accountInformation.addActionListener(new AccountInformationActionListener());
+        JLabel i1 = new JLabel("Welcome to Dashboard");
+        i1.setFont(new Font("Arial", Font.BOLD, 26));
+        i1.setBounds(150, 10, 300, 100);
+        add(i1);
 
-        button_deposit = new JButton("Deposit");
-        button_deposit.setBackground(new Color(158, 156, 233));
-        button_deposit.addActionListener(new DepositActionListener());
+        b = new JButton("CREATE CUSTOMER ACCOUNT");
+        b.setBounds(70, 140, 220, 20);
+        b.addActionListener(this);
+        add(b);
 
-        button_withdraw = new JButton("Withdraw");
-        button_withdraw.setBackground(new Color(201, 200, 237));
-        button_withdraw.addActionListener(new WithdrawActionListener());
+        b0 = new JButton("ACCOUNT STATEMENT");
+        b0.setBounds(320, 140, 220, 20);
+        b0.addActionListener(this);
+        add(b0);
 
-        frame_service.add(button_createAccount);
-        frame_service.add(button_accountInformation);
-        frame_service.add(button_deposit);
-        frame_service.add(button_withdraw);
+        b1 = new JButton("BALANCE ENQUIRY");
+        b1.setBounds(100, 200, 150, 20);
+        b1.addActionListener(this);
+        add(b1);
 
-        frame_service.setVisible(true);
+        b11 = new JButton("FAST CASH");
+        b11.setBounds(340, 200, 150, 20);
+        b11.addActionListener(this);
+        add(b11);
+
+        b2 = new JButton("DEPOSIT FUNDS");
+        b2.setBounds(100, 260, 150, 20);
+        add(b2);
+
+        b21 = new JButton("PIN CHANGE");
+        b21.setBounds(340, 260, 150, 20);
+        add(b21);
+
+        b3 = new JButton("WITHDRAW FUNDS");
+        b3.setBounds(100, 320, 150, 20);
+        add(b3);
+
+        b31 = new JButton("DEBIT/CREDIT");
+        b31.setBounds(340, 320, 150, 20);
+        add(b31);
+
+        b4 = new JButton("LOG OUT");
+        b4.setBounds(220, 400, 150, 20);
+        add(b4);
+
+        setVisible(true);
     }
-}
 
-class CreateAccountActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
-        CreateAccount.main(null);
-    }
-}
+        //create customer account
+        if (e.getSource() == ServiceFrame.b) {
+            CreateAccount.main(null);
+        }
+        //account statement
+        if (e.getSource() == ServiceFrame.b0) {
+            AccountStatement.main(null);
+        }
+        //balance enquiry
+        if (e.getSource() == ServiceFrame.b1) {
+            BalanceEnquiry.main(null);
+        }
+        //flat cash
+        if (e.getSource() == ServiceFrame.b11) {
+            FlatCash.main(null);
+        }
+        //deposit funds
+        if (e.getSource() == ServiceFrame.b2) {
 
-class AccountInformationActionListener implements ActionListener {
-    public void actionPerformed(ActionEvent e) {
-        AccountInformation.main(null);
-    }
-}
+        }
+        //pin change
+        if (e.getSource() == ServiceFrame.b21) {
 
-class DepositActionListener implements ActionListener {
-    public void actionPerformed(ActionEvent e) {
-        Deposit.main(null);
-    }
-}
+        }
+        //withdraw funds
+        if (e.getSource() == ServiceFrame.b3) {
 
-class WithdrawActionListener implements ActionListener {
-    public void actionPerformed(ActionEvent e) {
-        Withdraw.main(null);
+        }
+        //debit/ credit
+        if (e.getSource() == ServiceFrame.b31) {
+
+        }
+        //log out
+        if (e.getSource() == ServiceFrame.b4) {
+
+        }
     }
 }
 
 @SuppressWarnings("unused")
 public class Services {
     public static void main(String[] args) {
-        ServiceFrame serviceFrame = new ServiceFrame();
+        ServiceFrame dashboard = new ServiceFrame();
     }
 }

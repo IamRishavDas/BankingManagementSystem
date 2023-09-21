@@ -1,17 +1,17 @@
+package AccountStatementWindow;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FastCash extends JFrame {
+public class AccountStatement extends JFrame {
 
-    FastCash() {
-        
+    AccountStatement() {
         setLayout(null);
-        setTitle(" Fast Cash");
-
+        setTitle("Account Statement");
+        
         setSize(500, 400);
-        this.setLocationRelativeTo(null);
-        this.setResizable(false);
+        setLocationRelativeTo(null);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         Color color = new Color(204, 252, 232);
@@ -31,14 +31,14 @@ public class FastCash extends JFrame {
         accnotext.setBounds(50, 140, 400, 30);
         add(accnotext);
 
-        JLabel pin = new JLabel("PIN");
-        pin.setBounds(50, 150, 100, 100);
-        pin.setFont(new Font("Arial", Font.BOLD, 16));
-        add(pin);
+        JLabel amount = new JLabel("PIN");
+        amount.setBounds(50, 150, 100, 100);
+        amount.setFont(new Font("Arial", Font.BOLD, 16));
+        add(amount);
 
-        JTextField pintext = new JTextField();
-        pintext.setBounds(50, 230, 400, 30);
-        add(pintext);
+        JTextField amttext = new JTextField();
+        amttext.setBounds(50, 230, 400, 30);
+        add(amttext);
 
         JButton proceed = new JButton("PROCEED");
         proceed.setBounds(200, 300, 100, 20);
@@ -49,7 +49,7 @@ public class FastCash extends JFrame {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        FastCash obj = new FastCash();
+        AccountStatement obj = new AccountStatement();
     }
 
 }

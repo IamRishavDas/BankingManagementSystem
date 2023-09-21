@@ -1,19 +1,18 @@
+package BalanceEnquiryWindow;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FastCash extends JFrame {
+public class BalanceEnquiry extends JFrame {
 
-    FastCash() {
-        
+    BalanceEnquiry() {
         setLayout(null);
-        setTitle(" Fast Cash");
-
+        setTitle("Balance Enquiry");
+        
         setSize(500, 400);
-        this.setLocationRelativeTo(null);
-        this.setResizable(false);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
+        
         Color color = new Color(204, 252, 232);
         getContentPane().setBackground(color);
 
@@ -49,7 +48,7 @@ public class FastCash extends JFrame {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        FastCash obj = new FastCash();
+        BalanceEnquiry obj = new BalanceEnquiry();
     }
 
 }

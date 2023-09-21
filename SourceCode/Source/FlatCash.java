@@ -1,10 +1,11 @@
+package FlatCashWindow;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FastCash extends JFrame {
+public class FlatCash extends JFrame {
 
-    FastCash() {
+    FlatCash() {
         
         setLayout(null);
         setTitle(" Fast Cash");
@@ -49,7 +50,7 @@ public class FastCash extends JFrame {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        FastCash obj = new FastCash();
+        FlatCash obj = new FlatCash();
     }
 
 }
