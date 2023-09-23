@@ -4,6 +4,6 @@
  All the visual Functionality will use the GUI swing in Java
 
 Inorder to test the files just compile the files using <<javac -d . *>>
-and run the SetUp\MainFrame.class using <<java SetUp.MainFrame>>
+and run the SetUp\MainFrame.class using "java SetUp.MainFrame"
 
 The JDK version is updated with 20.0.1 (support with JDK 17)
