@@ -87,39 +87,39 @@ class ServiceFrame extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        //create customer account
+        // create customer account
         if (e.getSource() == ServiceFrame.b) {
             CreateAccount.main(null);
         }
-        //account statement
+        // account statement
         if (e.getSource() == ServiceFrame.b0) {
             AccountStatement.main(null);
         }
-        //balance enquiry
+        // balance enquiry
         if (e.getSource() == ServiceFrame.b1) {
             BalanceEnquiry.main(null);
         }
-        //flat cash
+        // flat cash
         if (e.getSource() == ServiceFrame.b11) {
             FlatCash.main(null);
         }
-        //deposit funds
+        // deposit funds
         if (e.getSource() == ServiceFrame.b2) {
             DepositFunds.main(null);
         }
-        //pin change
+        // pin change
         if (e.getSource() == ServiceFrame.b21) {
             PinChange.main(null);
         }
-        //withdraw funds
+        // withdraw funds
         if (e.getSource() == ServiceFrame.b3) {
             WithdrawFunds.main(null);
         }
-        //debit/ credit
+        // debit/ credit
         if (e.getSource() == ServiceFrame.b31) {
             DebitCredit.main(null);
         }
-        //log out
+        // log out
         if (e.getSource() == ServiceFrame.b4) {
             System.exit(0);
         }
