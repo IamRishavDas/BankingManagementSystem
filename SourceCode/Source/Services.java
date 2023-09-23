@@ -4,6 +4,10 @@ import CreateAccountWindow.CreateAccount;
 import AccountStatementWindow.AccountStatement;
 import BalanceEnquiryWindow.BalanceEnquiry;
 import FlatCashWindow.FlatCash;
+import DepositWindow.DepositFunds;
+import PinChangeWindow.PinChange;
+import WithdrawWindow.WithdrawFunds;
+import DebitCreditWindow.DebitCredit;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -56,22 +60,27 @@ class ServiceFrame extends JFrame implements ActionListener {
 
         b2 = new JButton("DEPOSIT FUNDS");
         b2.setBounds(100, 260, 150, 20);
+        b2.addActionListener(this);
         add(b2);
 
         b21 = new JButton("PIN CHANGE");
         b21.setBounds(340, 260, 150, 20);
+        b21.addActionListener(this);
         add(b21);
 
         b3 = new JButton("WITHDRAW FUNDS");
         b3.setBounds(100, 320, 150, 20);
+        b3.addActionListener(this);
         add(b3);
 
         b31 = new JButton("DEBIT/CREDIT");
         b31.setBounds(340, 320, 150, 20);
+        b31.addActionListener(this);
         add(b31);
 
         b4 = new JButton("LOG OUT");
         b4.setBounds(220, 400, 150, 20);
+        b4.addActionListener(this);
         add(b4);
 
         setVisible(true);
@@ -96,23 +105,23 @@ class ServiceFrame extends JFrame implements ActionListener {
         }
         //deposit funds
         if (e.getSource() == ServiceFrame.b2) {
-
+            DepositFunds.main(null);
         }
         //pin change
         if (e.getSource() == ServiceFrame.b21) {
-
+            PinChange.main(null);
         }
         //withdraw funds
         if (e.getSource() == ServiceFrame.b3) {
-
+            WithdrawFunds.main(null);
         }
         //debit/ credit
         if (e.getSource() == ServiceFrame.b31) {
-
+            DebitCredit.main(null);
         }
         //log out
         if (e.getSource() == ServiceFrame.b4) {
-
+            System.exit(0);
         }
     }
 }

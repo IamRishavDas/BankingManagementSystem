@@ -1,15 +1,13 @@
+package DebitCreditWindow;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FastCash extends JFrame {
-
-    FastCash() {
-        
+public class DebitCredit extends JFrame {
+    DebitCredit() {
         setLayout(null);
-        setTitle(" Fast Cash");
-
-        setSize(500, 400);
+        
+        setSize(500, 500);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -31,17 +29,27 @@ public class FastCash extends JFrame {
         accnotext.setBounds(50, 140, 400, 30);
         add(accnotext);
 
-        JLabel pin = new JLabel("PIN");
-        pin.setBounds(50, 150, 100, 100);
-        pin.setFont(new Font("Arial", Font.BOLD, 16));
-        add(pin);
+        JLabel amount = new JLabel("Applying For");
+        amount.setBounds(50, 150, 150, 100);
+        amount.setFont(new Font("Arial", Font.BOLD, 16));
+        add(amount);
 
-        JTextField pintext = new JTextField();
-        pintext.setBounds(50, 230, 400, 30);
-        add(pintext);
+        String cards[] = { "Credit", "Debit", "Both" };
+        JComboBox<String> card = new JComboBox<>(cards);
+        card.setBounds(50, 230, 400, 30);
+        add(card);
+
+        JLabel acc = new JLabel("Account Holder");
+        acc.setBounds(50, 240, 150, 100);
+        acc.setFont(new Font("Arial", Font.BOLD, 16));
+        add(acc);
+
+        JTextField scctext = new JTextField();
+        scctext.setBounds(50, 310, 400, 30);
+        add(scctext);
 
         JButton proceed = new JButton("PROCEED");
-        proceed.setBounds(200, 300, 100, 20);
+        proceed.setBounds(200, 380, 100, 20);
         add(proceed);
 
         setVisible(true);
@@ -49,7 +57,7 @@ public class FastCash extends JFrame {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        FastCash obj = new FastCash();
+        DebitCredit obj = new DebitCredit();
     }
 
 }
