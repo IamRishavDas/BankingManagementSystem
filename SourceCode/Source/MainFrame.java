@@ -46,7 +46,7 @@ class LOG_IN_Frame extends JFrame {
         // i2.setBounds(150, 10, 100, 100);
         // add(i2);
 
-        Color color = new Color(83, 202, 255);
+        Color color = new Color(117, 163, 222);
         getContentPane().setBackground(color);
         JLabel l1 = new JLabel("LOG IN");
         l1.setFont(new Font("Arial", Font.BOLD, 40));
@@ -80,9 +80,9 @@ class LOG_IN_Frame extends JFrame {
         b.addActionListener(new LogInAttributeCheck());
         add(b);
 
-        b2 = new JButton("New User");
+        b2 = new JButton("Reset");
         b2.setBounds(340, 350, 200, 20);
-        b2.addActionListener(new NewUserButtonListener());
+        b2.addActionListener(new ResetButtonListener());
         add(b2);
 
         setVisible(true);
@@ -110,9 +110,12 @@ class LogInAttributeCheck implements ActionListener {
     }
 }
 
-class NewUserButtonListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
-        JOptionPane.showMessageDialog(null, "New user Attribute form", "Sign Up", JOptionPane.INFORMATION_MESSAGE);
+class ResetButtonListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+
+        LOG_IN_Frame.uidtext.setText("");
+        LOG_IN_Frame.passtext.setText("");
+
     }
 }
 
