@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 class ServiceFrame extends JFrame implements ActionListener {
 
@@ -121,7 +122,11 @@ class ServiceFrame extends JFrame implements ActionListener {
         }
         // log out
         if (e.getSource() == ServiceFrame.b4) {
-            System.exit(0);
+            int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to log out?", "Exit Dialog",
+                    JOptionPane.WARNING_MESSAGE);
+            if (JOptionPane.OK_OPTION == option) {
+                System.exit(0);
+            }
         }
     }
 }
