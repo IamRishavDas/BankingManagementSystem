@@ -122,7 +122,7 @@ class ServiceFrame extends JFrame implements ActionListener {
         }
         // log out
         if (e.getSource() == ServiceFrame.b4) {
-            int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to log out?", "Exit Dialog",
+            int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to log out, it will terminate the whole session?", "Exit Dialog",
                     JOptionPane.WARNING_MESSAGE);
             if (JOptionPane.OK_OPTION == option) {
                 System.exit(0);
